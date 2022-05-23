@@ -29,12 +29,9 @@ export class AppComponent {
     
    this.text = null;
    
-   console.log(process.env.OPEN_API_KEY)
     }
   ngOnInit(data: { poems: Poem }) {
-    // this.getPoem();
-    
-    console.log("poem", this.poem);
+     console.log("poem", this.poem);
   }
 
   getPoem(text): void {
@@ -56,5 +53,5 @@ export class AppComponent {
     
   }
 
-// 
+
 }
