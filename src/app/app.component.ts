@@ -4,7 +4,7 @@ import { Inject } from '@angular/core';
 import { PoemService } from './poem.service';
 import {HttpClient} from "@angular/common/http";
 
-
+const appSecret = '123'
 
 
 
@@ -12,6 +12,7 @@ import {HttpClient} from "@angular/common/http";
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  
 })
 export class AppComponent {
   title = 'angular-reload';
@@ -28,6 +29,7 @@ export class AppComponent {
     
    this.text = null;
    
+   console.log(process.env.OPEN_API_KEY)
     }
   ngOnInit(data: { poems: Poem }) {
     // this.getPoem();

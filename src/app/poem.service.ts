@@ -4,16 +4,19 @@ import { catchError, map, retry } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Poem } from './poem';
 import { AppModule } from './app.module';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'any',
 
-  
+
 })
 export class PoemService {
-  constructor(private httpClient: HttpClient,) {}
+  constructor(private httpClient: HttpClient,) { }
   poem_api_url = 'https://api.openai.com/v1/engines/text-curie-001/completions';
- text: string;
+
+
+  text: string;
   getPoem(text): Observable<Poem> {
     const data = {
       prompt: text,
@@ -25,7 +28,7 @@ export class PoemService {
     };
     let header = new HttpHeaders().set(
       'Authorization',
-      `Bearer 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`
+      environment.OPEN_API_KEY
     ).set(
       'Content-type', 'Application/json'
     );
@@ -34,11 +37,8 @@ export class PoemService {
       .post<Poem>(this.poem_api_url, body, {
         headers: header,
       })
-      // .pipe(
-      //   map((resp: any) => resp.json()),
-      //   catchError((error) => throwError(error))
-      // );
+
   }
 
-  
+
 }

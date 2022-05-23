@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var environment = {\n  production: true,\n  OPEN_API_KEY: 'Bearer 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'\n};","map":null,"metadata":{},"sourceType":"module"}
