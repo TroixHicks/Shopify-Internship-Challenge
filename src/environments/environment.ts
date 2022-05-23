@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  OPEN_API_KEY : 'Bearer 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'
+  OPEN_API_KEY : 'Bearer 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'
 };
 /*
  * For easier debugging in development mode, you can import the following file
