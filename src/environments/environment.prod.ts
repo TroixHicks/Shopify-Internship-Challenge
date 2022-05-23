@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  OPEN_API_KEY : 'Bearer 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'
+  OPEN_API_KEY : 'Bearer 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'
   
 };
